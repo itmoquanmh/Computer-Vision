@@ -54,6 +54,9 @@ def ShowImages(Is, ncols = 0, hide_axes = True, vmin = None, vmax = None):
   for i in range(len(Is), ncols * ((len(Is) + ncols - 1) // ncols)):
     axes[i].set_visible(False)
 
+  plt.subplots_adjust(hspace=0.5, wspace=0.3)
+  plt.tight_layout(pad=2.5)
+
   # And now show image
   plt.show()
 
